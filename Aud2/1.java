@@ -38,7 +38,7 @@ class MathOperationsNoArguments implements Operation, MessageProvider{
 
     @Override
     public String getMessage(){
-        return "These are the numbers you want to add number1: "+ x + " number2: "+ y +".";
+        return "No arguments here :)";
     }
 
 }
@@ -94,3 +94,4 @@ public class Main {
 
     }
 }
+
