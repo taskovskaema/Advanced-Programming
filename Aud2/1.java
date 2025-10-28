@@ -29,6 +29,20 @@ class MathOperations implements Operation, MessageProvider{
 
 }
 
+class MathOperationsNoArguments implements Operation, MessageProvider{
+
+    @Override
+    public int apply(int a, int b){
+        return a+b;
+    }
+
+    @Override
+    public String getMessage(){
+        return "These are the numbers you want to add number1: "+ x + " number2: "+ y +".";
+    }
+
+}
+
 public class Main {
     public static void main(String[] args) {
         Scanner input= new Scanner(System.in);
@@ -62,7 +76,7 @@ public class Main {
 
 
         //5. klasa koj implementira interfejs bez argumenti
-        MessageProvider mp= new MathOperations(num1,num2);
+        MessageProvider mp= new MathOperationsNoArguments();
         System.out.println("5. Implementiran interfejs bez argumenti rez: "+mp.getMessage());
 
         //6.  klasa bez argumenti
@@ -80,4 +94,3 @@ public class Main {
 
     }
 }
-
